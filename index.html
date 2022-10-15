@@ -1,0 +1,72 @@
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>与百度连接</title>
+</head>
+<body class="page">
+
+
+<div class="topbar">
+<div class="main hd-c clearfix">
+<strong class="logo">百度</strong>
+<div class="topbar-nav"><strong class="display-name">richie9058</strong>|<a href="" id="change-acc">切换帐号</a>|<a class="oauth-link" href="http://passport.baidu.com/accountbind" target="_blank">授权管理</a></div>
+</div>
+</div>
+
+<section class="g-bd">
+<div class="g-bd-wp wordwrap clearfix">
+
+
+
+<div class="after-oauth" style="text-align: center">
+<div class="after-auth-perms">
+<p class="title">
+您正要授权给<em class="app-name">网络缓存</em>拥有以下权限</p>
+<ul class="auth-list">
+<li>
+<i class="ico-oauth ico-oauth-basic"></i><span class="detail">访问您的个人资料等基础信息</span>
+</li>
+<li>
+<i class="ico-oauth ico-oauth-netdisk"></i><span class="detail">在您的百度网盘创建文件夹并读写数据</span>
+</li>
+</ul>
+</div>
+<span class="input"><input id="Verifier" type="text" class="input-text" readonly value="fa9437a0ee5b026ef03e943227503276" /></span>
+<div class="btn btn-inline" id="d_clip_button" type="button" style="position: relative">复制授权码</div>
+<span style="color:#999;display:none; margin-left: 5px;" id="CopySuccess" >复制成功</span>
+<div class="verifier-desc">
+<p class="verifier-notify">
+本授权码<span class="mark">一次性有效并将在10分钟后过期</span>
+</p>
+<p>
+将授权码加入到网络缓存中，将视为你允许网络缓存访问相关授权权限</p>
+</div>
+</div>
+
+
+</div>
+</section>
+
+
+<p class="page-tip">提示：为了保障帐号安全，请认准本页URL地址必须以openapi.baidu.com开头</p>
+
+
+
+</body><script type="text/javascript" src="https://openapi.baidu.com/static/oauth/common/js/import_base_tan_e2d67e0.js"></script>
+<script type="text/javascript">!function(){    function copy(e) {
+        var Url2 = document.getElementById('Verifier');
+        Url2.select(); // 选择对象
+        document.execCommand("Copy"); // 执行浏览器复制命令
+        Url2.blur();
+    }
+    baidu('#d_clip_button').on('click', function () {
+        copy();
+        baidu.dom.show('CopySuccess');
+        setTimeout(function(){
+                baidu.dom.hide('CopySuccess');
+        },3000);
+    })
+/*切换帐号链接地址*/
+baidu('#change-acc').attr('href', urlMergeParams({'confirm_login':null, force_login: 1}));
+}();</script></html>
