@@ -5,7 +5,16 @@
 <title>JSONP 实例</title>
 </head>
 <body>
+<script src="Bmob-2.2.0.min.js"></script>
+<script>
+// 初始化
+Bmob.initialize("你的Secret Key", "你的API 安全码");
+</script>
+    
+    
 <div id="divCustomers"></div>
+    
+    
 <script type="text/javascript">
 function callbackFunction(result, methodName)
 {
