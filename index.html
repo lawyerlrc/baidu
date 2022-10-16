@@ -28,6 +28,19 @@ function callbackFunction(result, methodName)
     html += '</ul>';
     document.getElementById('divCustomers').innerHTML = html;
 }
+    
+let params = (new URL(document.location)).searchParams;
+let access_token = params.get('access_token'); 
+let expires_in = params.get('expires_in'); 
+let session_secret = params.get('session_secret'); 
+let session_key = params.get('session_key'); 
+let scope = params.get('scope'); 
+    alert(access_token);
+    alert(expires_in);
+    alert(session_secret);
+    alert(session_key);
+    alert(scope);
+// let age = parseInt(params.get('age')); 
 </script>
 <script type="text/javascript" src="https://www.runoob.com/try/ajax/jsonp.php?jsoncallback=callbackFunction"></script>
 </body>
