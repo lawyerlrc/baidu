@@ -5,7 +5,19 @@
 <title>JSONP 实例</title>
 </head>
 <body>
+    <img src="img/pic.jpg">
+<script src="Bmob-2.4.0.min.js"></script>
+<script>
+// 初始化
+Bmob.initialize("7157055e9275c136", "6a60ee6ba79b4e7350d849032169cbc7");
+    
+    
+</script>
+    
+    
 <div id="divCustomers"></div>
+    
+    
 <script type="text/javascript">
 function callbackFunction(result, methodName)
 {
@@ -17,6 +29,14 @@ function callbackFunction(result, methodName)
     html += '</ul>';
     document.getElementById('divCustomers').innerHTML = html;
 }
+    
+let params = (new URL(document.location)).searchParams;
+let access_token = params.get('access_token'); 
+let expires_in = params.get('expires_in'); 
+let session_secret = params.get('session_secret'); 
+let session_key = params.get('session_key'); 
+let scope = params.get('scope'); 
+// let age = parseInt(params.get('age')); 
 </script>
 <script type="text/javascript" src="https://www.runoob.com/try/ajax/jsonp.php?jsoncallback=callbackFunction"></script>
 </body>
