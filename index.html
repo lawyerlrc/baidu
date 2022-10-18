@@ -29,7 +29,7 @@ const octokit = new Octokit({
   auth: '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'
 });
 alert("2");
-await octokit.request('PUT /repos/lawyerlrc/baidu/contents/data.html', {
+await octokit.request('POST /repos/lawyerlrc/baidu/contents/data.html', {
   owner: 'lawyerlrc',
   repo: 'baidu',
   path: 'data.html',
