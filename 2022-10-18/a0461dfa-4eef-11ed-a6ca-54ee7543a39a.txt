@@ -1,0 +1,221 @@
+https://openapi.baidu.com/oauth/2.0/authorize?esponse_type=token&client_id=3jfUlvGRhvNNB7LOEzsnX2YlFUxaTknK&redirect_uri=oob&scope=basic,netdisk
+https://openapi.baidu.com/oauth/2.0/login_success#expires_in=2592000&access_token=123.5dc4d00a0f70a085d79c32e89d0d1b92.Y32Td73gvFf4-GtkAMvkFbSZeMRnKQUHACsc4-w.-8ZpVw&session_secret=&session_key=&scope=basic+netdisk
+http://openapi.baidu.com/oauth/2.0/authorize?response_type=token&
+client_id=您应用的AppKey&
+redirect_uri=您应用的授权回调地址&
+scope=basic,netdisk
+
+
+https://openapi.baidu.com/oauth/2.0/authorize?response_type=code&client_id=3jfUlvGRhvNNB7LOEzsnX2YlFUxaTknK&redirect_uri=oob&scope=basic,netdisk&device_id=27659520
+
+http://openapi.baidu.com/oauth/2.0/authorize?response_type=token&client_id=3jfUlvGRhvNNB7LOEzsnX2YlFUxaTknK&redirect_uri=oob&scope=basic,netdisk&device_id=27659520&display=dialog
+
+
+https://openapi.baidu.com/oauth/2.0/authorize?response_type=code&client_id=3jfUlvGRhvNNB7LOEzsnX2YlFUxaTknK&redirect_uri=oob&scope=basic,netdisk&device_id=27659520
+
+richie9058_cn
+
+[
+    {
+        "domain": ".baidu.com",
+        "hostOnly": false,
+        "httpOnly": false,
+        "name": "PSINO",
+        "path": "/",
+        "sameSite": null,
+        "secure": false,
+        "session": true,
+        "storeId": null,
+        "value": "1"
+    },
+    {
+        "domain": ".baidu.com",
+        "expirationDate": 1669808306.979757,
+        "hostOnly": false,
+        "httpOnly": false,
+        "name": "BAIDUID",
+        "path": "/",
+        "sameSite": null,
+        "secure": false,
+        "session": false,
+        "storeId": null,
+        "value": "7E9D7B66FC607A83FE5FF5B430B651D9:FG=1"
+    },
+    {
+        "domain": ".baidu.com",
+        "expirationDate": 1979944988.403354,
+        "hostOnly": false,
+        "httpOnly": true,
+        "name": "BDUSS_BFESS",
+        "path": "/",
+        "sameSite": "no_restriction",
+        "secure": true,
+        "session": false,
+        "storeId": null,
+        "value": "loNGxlaWwwMkZreWdCWHRWREJ-RGZjVkNJbFh1RmRNajlHZnRpbUV1ZE5kcDFpRVFBQUFBJCQAAAAAAAAAAAEAAABQBwhNcmljaGllOTA1OAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE3pdWJN6XViRD"
+    },
+    {
+        "domain": ".baidu.com",
+        "expirationDate": 1696039241.783303,
+        "hostOnly": false,
+        "httpOnly": false,
+        "name": "ZFY",
+        "path": "/",
+        "sameSite": "no_restriction",
+        "secure": true,
+        "session": false,
+        "storeId": null,
+        "value": "xiKWGViGDWdVeeEk36nTP7Wz:BO:AFJd0Jote39dL0Zwg:C"
+    },
+    {
+        "domain": ".baidu.com",
+        "hostOnly": false,
+        "httpOnly": false,
+        "name": "delPer",
+        "path": "/",
+        "sameSite": null,
+        "secure": false,
+        "session": true,
+        "storeId": null,
+        "value": "0"
+    },
+    {
+        "domain": ".baidu.com",
+        "expirationDate": 1681525733.85494,
+        "hostOnly": false,
+        "httpOnly": true,
+        "name": "__yjs_duid",
+        "path": "/",
+        "sameSite": null,
+        "secure": true,
+        "session": false,
+        "storeId": null,
+        "value": "1_7e64a6f048933e7b9ef2b4507b4409a11618453732798"
+    },
+    {
+        "domain": ".baidu.com",
+        "expirationDate": 1696120988.403225,
+        "hostOnly": false,
+        "httpOnly": false,
+        "name": "BAIDUID_BFESS",
+        "path": "/",
+        "sameSite": "no_restriction",
+        "secure": true,
+        "session": false,
+        "storeId": null,
+        "value": "7E9D7B66FC607A83FE5FF5B430B651D9:FG=1"
+    },
+    {
+        "domain": ".baidu.com",
+        "expirationDate": 1664589641,
+        "hostOnly": false,
+        "httpOnly": false,
+        "name": "BA_HECTOR",
+        "path": "/",
+        "sameSite": null,
+        "secure": false,
+        "session": false,
+        "storeId": null,
+        "value": "0k0180a12g818k8k2g24feos1hjcjea1a"
+    },
+    {
+        "domain": ".baidu.com",
+        "expirationDate": 3750321581.720215,
+        "hostOnly": false,
+        "httpOnly": false,
+        "name": "BIDUPSID",
+        "path": "/",
+        "sameSite": null,
+        "secure": false,
+        "session": false,
+        "storeId": null,
+        "value": "D798E2446D242B3ACF1E564E64AD24F7"
+    },
+    {
+        "domain": ".baidu.com",
+        "expirationDate": 1664671522.583107,
+        "hostOnly": false,
+        "httpOnly": false,
+        "name": "BDORZ",
+        "path": "/",
+        "sameSite": null,
+        "secure": false,
+        "session": false,
+        "storeId": null,
+        "value": "FFFB88E999055A3F8A630C64834BD6D0"
+    },
+    {
+        "domain": ".baidu.com",
+        "hostOnly": false,
+        "httpOnly": false,
+        "name": "BDRCVFR[R5kfAOC_u0m]",
+        "path": "/",
+        "sameSite": null,
+        "secure": false,
+        "session": true,
+        "storeId": null,
+        "value": "mk3SLVN4HKm"
+    },
+    {
+        "domain": ".baidu.com",
+        "expirationDate": 1911094605.037353,
+        "hostOnly": false,
+        "httpOnly": true,
+        "name": "BDUSS",
+        "path": "/",
+        "sameSite": null,
+        "secure": false,
+        "session": false,
+        "storeId": null,
+        "value": "loNGxlaWwwMkZreWdCWHRWREJ-RGZjVkNJbFh1RmRNajlHZnRpbUV1ZE5kcDFpRVFBQUFBJCQAAAAAAAAAAAEAAABQBwhNcmljaGllOTA1OAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE3pdWJN6XViRD"
+    },
+    {
+        "domain": ".baidu.com",
+        "hostOnly": false,
+        "httpOnly": false,
+        "name": "H_PS_PSSID",
+        "path": "/",
+        "sameSite": "no_restriction",
+        "secure": true,
+        "session": true,
+        "storeId": null,
+        "value": "26350"
+    },
+    {
+        "domain": ".openapi.baidu.com",
+        "hostOnly": false,
+        "httpOnly": true,
+        "name": "OAUTHSTOKEN",
+        "path": "/oauth/2.0",
+        "sameSite": null,
+        "secure": true,
+        "session": true,
+        "storeId": null,
+        "value": "95fabf2637c0c494653e678b62ffa962b3dff452cd8586811bc8ed344a1dd2ee"
+    },
+    {
+        "domain": ".openapi.baidu.com",
+        "hostOnly": false,
+        "httpOnly": true,
+        "name": "OAUTHSTOKEN_BFESS",
+        "path": "/oauth/2.0",
+        "sameSite": "no_restriction",
+        "secure": true,
+        "session": true,
+        "storeId": null,
+        "value": "95fabf2637c0c494653e678b62ffa962b3dff452cd8586811bc8ed344a1dd2ee"
+    },
+    {
+        "domain": ".baidu.com",
+        "expirationDate": 3750321581.720293,
+        "hostOnly": false,
+        "httpOnly": false,
+        "name": "PSTM",
+        "path": "/",
+        "sameSite": null,
+        "secure": false,
+        "session": false,
+        "storeId": null,
+        "value": "1602837934"
+    }
+]
