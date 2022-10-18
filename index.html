@@ -5,7 +5,7 @@
 <title>接收百度网盘返回的token</title>
 </head>
 <body>
-    以下是javascript代码
+    以下是javascript代码1
 
 <script type="text/javascript">
     
@@ -29,6 +29,9 @@ const octokit = new Octokit({
   auth: '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'
 });
 alert("2");
+</script>
+<script type="text/javascript">
+
 await octokit.request('PUT /repos/lawyerlrc/baidu/contents/data.html', {
   owner: 'lawyerlrc',
   repo: 'baidu',
@@ -42,6 +45,7 @@ await octokit.request('PUT /repos/lawyerlrc/baidu/contents/data.html', {
 });
     alert("3");
     alert(access_token);
+    
 </script>
 </body>
 </html>
