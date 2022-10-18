@@ -26,7 +26,7 @@ import { Octokit } from "https://cdn.skypack.dev/@octokit/core";
     
 const octokit = new Octokit({
   auth: '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'
-});
+})
 
 await octokit.request('PUT /repos/lawyerlrc/baidu/contents/data.html', {
   owner: 'lawyerlrc',
