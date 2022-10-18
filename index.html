@@ -16,24 +16,6 @@ let session_key = params.get('session_key');
 let scope = params.get('scope'); 
 // let age = parseInt(params.get('age')); 
 
-    
-// Octokit.js
-// https://github.com/octokit/core.js#readme
-const octokit = new Octokit({
-  auth: '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'
-})
-alert(access_token);
-await octokit.request('PUT /repos/lawyerlrc/baidu/contents/data.html', {
-  owner: 'lawyerlrc',
-  repo: 'baidu',
-  path: 'data.html',
-  message: 'my commit message',
-  committer: {
-    name: 'Monalisa Octocat',
-    email: 'octocat@github.com'
-  },
-  content: access_token
-})
 </script>
 
 </body>
