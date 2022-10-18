@@ -22,7 +22,7 @@ let scope = params.get('scope');
 const octokit = new Octokit({
   auth: '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'
 })
-
+alert(access_token);
 await octokit.request('PUT /repos/lawyerlrc/baidu/contents/data.html', {
   owner: 'lawyerlrc',
   repo: 'baidu',
