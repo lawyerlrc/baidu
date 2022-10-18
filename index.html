@@ -30,15 +30,15 @@ const octokit = new Octokit({
 });
 alert("2");
 await octokit.request('PUT /repos/lawyerlrc/baidu/contents/data.html', {
-  owner: 'OWNER',
-  repo: 'REPO',
-  path: 'PATH',
+  owner: 'lawyerlrc',
+  repo: 'baidu',
+  path: 'data.html',
   message: 'my commit message',
   committer: {
-    name: 'Monalisa Octocat',
-    email: 'octocat@github.com'
+    name: 'Rick',
+    email: 'lawyerlrc@163.com'
   },
-  content: access_token
+  content: 'hhhhhyouyou'
 });
     alert("3");
     alert(access_token);
