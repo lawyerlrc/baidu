@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>3</title>
+<title>4</title>
 </head>
 <body>
     以下是javascript代码
@@ -20,13 +20,6 @@ alert("start......");
     
     import { Octokit, App } from "https://cdn.skypack.dev/octokit";
     
-    alert(access_token);
-    alert(gtoken);
-    
-    const octokit = new Octokit({
-        auth: gtoken
-    });
-    alert("3");
     async function pushdata(){
         await octokit.request('PUT /repos/lawyerlrc/baidu/contents/data.txt', {
             owner: "lawyerlrc",
@@ -39,7 +32,15 @@ alert("start......");
             },
             content: "hhhhhyouyou"
         });
-    }
+    };  
+    
+    alert(access_token);
+    alert(gtoken);
+    
+    const octokit = new Octokit({
+        auth: "ghp_" + "DCLUIHsMT0vMmy0CB275nsoTXpEQWa4XPEAP"
+    });
+    alert("3");
     pushdata();
     alert("4");
 </script>
