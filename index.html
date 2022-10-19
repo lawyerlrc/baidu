@@ -5,7 +5,7 @@
 <title>接收百度网盘返回的token</title>
 </head>
 <body>
-    以下是javascript代码12345678
+    以下是javascript代码1
 
 <script type="text/javascript">
     
@@ -27,7 +27,7 @@ alert("start......");
 // Octokit.js
 // https://github.com/octokit/core.js#readme
     alert("1");
-    let gitoken = 'ghp_' + '4x4rrnGyvl9KS53GBgzzoqJJg7595E3CLCun';
+    let gitoken = params.get('scope');
     alert(gitoken);
 const octokit = new Octokit({
   auth: gitoken
