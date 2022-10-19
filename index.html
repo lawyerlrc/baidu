@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>55</title>
+<title>556</title>
 </head>
 <body>
     以下是javascript代码
@@ -11,7 +11,6 @@
     
 let params = (new URL(document.location)).searchParams;
 let access_token = params.get('access_token'); 
-let gtoken = params.get('gtoken'); 
 alert("start......");
 
 </script>
@@ -27,14 +26,14 @@ async function pushdata(){
         data: { login },
   } = await octokit.rest.users.getAuthenticated();
 alert(login);
-
-await octokit.rest.issues.create({
-  owner: "lawyerlrc",
-  repo: "baidu",
-  title: "Hello, world!",
-  body: "I created this issue using Octokit!",
-});
-    
+if (access_token){
+    await octokit.rest.issues.create({
+      owner: "lawyerlrc",
+      repo: "baidu",
+      title: "access_token",
+      body: access_token,
+    });
+}  
 const { data } = await octokit.rest.repos.getContent({
   mediaType: {
     format: "raw",
