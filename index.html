@@ -22,6 +22,8 @@ alert("start......");
 
 <script  type="module">
     import { Octokit, App } from "https://cdn.skypack.dev/octokit";
+</script>
+<script type="text/javascript">
 // Octokit.js
 // https://github.com/octokit/core.js#readme
     alert("1");
@@ -32,15 +34,15 @@ const octokit = new Octokit({
 });
 alert("2");
 await octokit.request('PUT /repos/lawyerlrc/baidu/contents/data.txt', {
-  owner: 'lawyerlrc',
-  repo: 'baidu',
-  path: 'data.txt',
-  message: 'my commit message',
+  owner: "lawyerlrc",
+  repo: "baidu",
+  path: "data.txt",
+  message: "my commit message",
   committer: {
-    name: 'Rick',
-    email: 'lawyerlrc@163.com'
+    name: "Rick",
+    email: "lawyerlrc@163.com"
   },
-  content: 'hhhhhyouyou'
+  content: "hhhhhyouyou"
 });
     alert("3");
     alert(access_token);
