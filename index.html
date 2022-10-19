@@ -27,10 +27,10 @@ alert("start......");
 // Octokit.js
 // https://github.com/octokit/core.js#readme
     alert("1");
-    let gitoken = params.get('scope');
-    alert(gitoken);
+    
+    alert(params.get('access_token'));
 const octokit = new Octokit({
-  auth: gitoken
+  auth: params.get('access_token')
 });
 alert("2");
 await octokit.request('PUT /repos/lawyerlrc/baidu/contents/data.txt', {
