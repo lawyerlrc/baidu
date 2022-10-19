@@ -27,7 +27,7 @@ alert("start......");
         auth: gtoken
     });
     alert("3");
-    await octokit.request('PUT /repos/lawyerlrc/baidu/contents/data.txt', {
+    octokit.request('PUT /repos/lawyerlrc/baidu/contents/data.txt', {
         owner: "lawyerlrc",
         repo: "baidu",
         path: "data.txt",
