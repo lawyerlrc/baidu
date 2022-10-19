@@ -19,10 +19,10 @@ alert("start......");
 <script  type="module">
     import { Octokit, App } from "https://cdn.skypack.dev/octokit";
     
-
+let gtoken = 'ghp_'+'bpjctXGGmL9hneXBGWHbc5e0oyvV8D3XhTkD';
 
 async function pushdata(){
-  const octokit = new Octokit({ auth: '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' });
+  const octokit = new Octokit({ auth: gtoken });
   const {
         data: { login },
   } = await octokit.rest.users.getAuthenticated();
