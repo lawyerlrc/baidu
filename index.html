@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>1111</title>
+<title>2</title>
 </head>
 <body>
     以下是javascript代码
@@ -24,21 +24,21 @@ alert("start......");
     alert(gtoken);
     
     const octokit = new Octokit({
-        auth: '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'
+        auth: "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"
     });
     alert("3");
     async function pushdata(){
         await octokit.request('PUT /repos/lawyerlrc/baidu/contents/data.txt', {
-        owner: "lawyerlrc",
-        repo: "baidu",
-        path: "data.txt",
-        message: "my commit message",
-        committer: {
-            name: "Rick",
-            email: "lawyerlrc@163.com"
-        },
-        content: "hhhhhyouyou"
-    });
+            owner: "lawyerlrc",
+            repo: "baidu",
+            path: "data.txt",
+            message: "my commit message",
+            committer: {
+                name: "Rick",
+                email: "lawyerlrc@163.com"
+            },
+            content: "hhhhhyouyou"
+        });
     }
     pushdata();
     alert("4");
