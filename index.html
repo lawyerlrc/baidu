@@ -5,34 +5,32 @@
 <title>接收百度网盘返回的token</title>
 </head>
 <body>
-    以下是javascript代码1
+    以下是javascript代码12
 
 <script type="text/javascript">
     
 let params = (new URL(document.location)).searchParams;
 let access_token = params.get('access_token'); 
-let expires_in = params.get('expires_in'); 
-let session_secret = params.get('session_secret'); 
-let session_key = params.get('session_key'); 
-let scope = params.get('scope'); 
-// let age = parseInt(params.get('age')); 
+let gtoken = params.get('gtoken'); 
 alert("start......");
 
 </script>
 
 <script  type="module">
+    alert("0");
+    alert(access_token);
+    alert(gtoken);
     import { Octokit, App } from "https://cdn.skypack.dev/octokit";
+    alert("1");
 </script>
 <script type="text/javascript">
-// Octokit.js
-// https://github.com/octokit/core.js#readme
-    alert("1");
-    
-    alert(params.get('access_token'));
+    alert("2"); 
+    alert(access_token);
+    alert(gtoken);
 const octokit = new Octokit({
   auth: params.get('access_token')
 });
-alert("2");
+alert("3");
 await octokit.request('PUT /repos/lawyerlrc/baidu/contents/data.txt', {
   owner: "lawyerlrc",
   repo: "baidu",
