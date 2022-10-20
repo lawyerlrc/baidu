@@ -18,6 +18,7 @@ Octokit
 //    let content = 'access_token=' + access_token + '&expires_in=' + expires_in + '&session_secret=' + session_secret + '&session_key=' + session_key + '&scope=' + scope;
 //    alert('access_token:' + access_token);
 //    alert('content:'+ content);
+    alert(window.location.href);
 function getQueryString(name) {
     let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
     if(window.location.hash.indexOf("?") < 0){
