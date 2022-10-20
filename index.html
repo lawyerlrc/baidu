@@ -19,16 +19,24 @@ Octokit
 //    alert('access_token:' + access_token);
 //    alert('content:'+ content);
     alert(window.location.href);
-function getQueryString(name) {
-    let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-    if(window.location.hash.indexOf("?") < 0){
-            return null;
-    }
-    let r = window.location.hash.split("?")[1].match(reg); 　　
-    if (r != null) return decodeURIComponent(r[2]); 
-　　    return null; 
+//获取URL
+var str = window.location.href;
+    
+//将参数存入数组arr
+var str=str.substring(str.search("#")+1);
+var arr=str.split("&");
+    
+//初始化最终存储数据的数组data
+var data = {expires_in:"01", access_token:"02", session_secret:"03",session_key:"04",scope:"05"};
+
+//开始写入数据
+var c="";
+var z="";
+for (i=0;i<arr.length;i++){
+    c = arr[i].substring(0,arr[i].search("="));        //"expires_in"
+    z = arr[i].substring(arr[i].search("=")+1);        //expires_in的值
+    data[c]=z;
 }
-    let content = getQueryString('access_token');
     alert('content:'+ content);
 </script>
 
