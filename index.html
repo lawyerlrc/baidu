@@ -22,8 +22,9 @@ Github-Octokit
 
 //获取URL
 var str = window.location.href;
-        alert(document.getElementById("show").innerHTML);
-//document.getElementById("show").innerHTML = document.getElementById("show").innerHTML + "<br>当前页面URL：" + str；
+        
+document.getElementById("show").innerHTML = document.getElementById("show").innerHTML + "<br><br>当前页面URL：" + str ;
+        
 //将参数存入数组arr
 var str=str.substring(str.search("#")+1);
 var arr=str.split("&");
@@ -39,7 +40,7 @@ for (i=0;i<arr.length;i++){
     z = arr[i].substring(arr[i].search("=")+1);        //expires_in的值
     getdata[c]=z;
 }
-alert(document.getElementById("show").innerHTML + "<br>access_token:" + getdata.access_token);
+alert(document.getElementById("show").innerHTML + "<br>传入的access_token:" + getdata.access_token);
 </script>
 
 <script  type="module">
@@ -49,7 +50,7 @@ alert(document.getElementById("show").innerHTML + "<br>access_token:" + getdata.
 //函数
     async function dogithub(){
       //函数开始
-      document.getElementById("show").innerHTML = document.getElementById("show").innerHTML + "<br>dogithub beginning...";
+      document.getElementById("show").innerHTML = document.getElementById("show").innerHTML + "<br><br>dogithub beginning...";
         
       //建立对象octokit
       const octokit = new Octokit({ auth: gtoken });
