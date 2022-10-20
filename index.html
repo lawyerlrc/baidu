@@ -30,6 +30,7 @@ async function pushdata(){
         data: { login },
   } = await octokit.rest.users.getAuthenticated();
 alert(login);
+alert(access_token);
 if (access_token){
     await octokit.rest.issues.create({
       owner: "lawyerlrc",
