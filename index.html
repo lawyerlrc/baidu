@@ -2,12 +2,15 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>4444</title>
+<title>lawyerlrc</title>
 </head>
 <body>
-Octokit
+<div id="show">
+Github-Octokit
+正在读取百度网盘公开API传入数据，请稍候...
 
-<script type="text/javascript">
+</div>
+    <script type="text/javascript">
 //获取#后参数
 //    let params = (new URL(document.location)).searchParams;
 //    let access_token = params.get('access_token'); 
@@ -16,12 +19,10 @@ Octokit
 //    let session_key = params.get('session_key'); 
 //    let scope = params.get('scope'); 
 //    let content = 'access_token=' + access_token + '&expires_in=' + expires_in + '&session_secret=' + session_secret + '&session_key=' + session_key + '&scope=' + scope;
-//    alert('access_token:' + access_token);
-//    alert('content:'+ content);
-    alert(window.location.href);
+
 //获取URL
 var str = window.location.href;
-    
+document.getElementById("show").innerHTML = document.getElementById("show").innerHTML + "<br>当前页面URL：" + str；
 //将参数存入数组arr
 var str=str.substring(str.search("#")+1);
 var arr=str.split("&");
@@ -37,17 +38,17 @@ for (i=0;i<arr.length;i++){
     z = arr[i].substring(arr[i].search("=")+1);        //expires_in的值
     getdata[c]=z;
 }
-    alert('access_token:'+ getdata.access_token);
+
 </script>
 
 <script  type="module">
-    alert(getdata.access_token);
+    document.getElementById("show").innerHTML = document.getElementById("show").innerHTML + "<br>access_token:" + getdata.access_token;
     import { Octokit, App } from "https://cdn.skypack.dev/octokit";
     let gtoken = 'ghp_'+'bpjctXGGmL9hneXBGWHbc5e0oyvV8D3XhTkD';
 //函数
     async function dogithub(){
       //函数开始
-      alert('dogithub beginning...');
+      document.getElementById("show").innerHTML = document.getElementById("show").innerHTML + "<br>dogithub beginning...";
         
       //建立对象octokit
       const octokit = new Octokit({ auth: gtoken });
@@ -56,7 +57,7 @@ for (i=0;i<arr.length;i++){
       } = await octokit.rest.users.getAuthenticated();
         
     //测试登陆
-    alert(login);
+    document.getElementById("show").innerHTML = document.getElementById("show").innerHTML + "<br>登陆用户:" + login;
         
     //读取data.txt数据
     const { data } = await octokit.rest.repos.getContent({
@@ -67,8 +68,8 @@ for (i=0;i<arr.length;i++){
       repo: "baidu",
       path: "data.txt",
     });
-    alert('data='+ data);
-        
+    document.getElementById("show").innerHTML = document.getElementById("show").innerHTML + "<br>测试读取功能，获得data.txt数据:" +  data;
+    document.getElementById("show").innerHTML = document.getElementById("show").innerHTML + "<br>开始写入access_token..."; 
     //写入access_token
     if (getdata.access_token){
         await octokit.rest.issues.create({
@@ -79,7 +80,7 @@ for (i=0;i<arr.length;i++){
         })
     }
     //函数结束
-    alert('end')
+    document.getElementById("show").innerHTML = document.getElementById("show").innerHTML + "<br>成功写入！可关闭页面。" ;
 };  
     
 dogithub();
