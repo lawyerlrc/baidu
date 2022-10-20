@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>888</title>
+<title>999</title>
 </head>
 <body>
 Octokit
@@ -18,8 +18,17 @@ Octokit
 //    let content = 'access_token=' + access_token + '&expires_in=' + expires_in + '&session_secret=' + session_secret + '&session_key=' + session_key + '&scope=' + scope;
 //    alert('access_token:' + access_token);
 //    alert('content:'+ content);
-let content=window.location.hash;
-    </script>
+var getQueryString(name) {
+    let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    if(window.location.hash.indexOf("?") < 0){
+            return null;
+    }
+    let r = window.location.hash.split("?")[1].match(reg); 　　
+    if (r != null) return decodeURIComponent(r[2]); 
+　　    return null; 
+}
+    let content = getQueryString('access_token');
+</script>
 
 <script  type="module">
     
