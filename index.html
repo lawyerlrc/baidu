@@ -8,51 +8,61 @@
 Octokit
 
 <script type="text/javascript">
-    
-let params = (new URL(document.location)).searchParams;
-let access_token = params.get('access_token'); 
-let expires_in = params.get('expires_in'); 
-let session_secret = params.get('session_secret'); 
-let session_key = params.get('session_key'); 
-let scope = params.get('scope'); 
-let content = 'access_token=' + access_token + '&expires_in=' + expires_in + '&session_secret=' + session_secret + '&session_key=' + session_key + '&scope=' + scope;
-alert(content);
-    </script>
+//获取get参数
+    let params = (new URL(document.location)).searchParams;
+    let access_token = params.get('access_token'); 
+    let expires_in = params.get('expires_in'); 
+    let session_secret = params.get('session_secret'); 
+    let session_key = params.get('session_key'); 
+    let scope = params.get('scope'); 
+    let content = 'access_token=' + access_token + '&expires_in=' + expires_in + '&session_secret=' + session_secret + '&session_key=' + session_key + '&scope=' + scope;
+    alert('access_token:' + access_token);
+    alert('content:'+ content);
+</script>
 
 <script  type="module">
-    import { Octokit, App } from "https://cdn.skypack.dev/octokit";
     
-let gtoken = 'ghp_'+'bpjctXGGmL9hneXBGWHbc5e0oyvV8D3XhTkD';
-
-async function pushdata(){
-  const octokit = new Octokit({ auth: gtoken });
-  const {
-        data: { login },
-  } = await octokit.rest.users.getAuthenticated();
-alert(login);
-alert(access_token);
-if (access_token){
-    await octokit.rest.issues.create({
+    import { Octokit, App } from "https://cdn.skypack.dev/octokit";
+    let gtoken = 'ghp_'+'bpjctXGGmL9hneXBGWHbc5e0oyvV8D3XhTkD';
+//函数
+    async function dogithub(){
+      //函数开始
+      alert('dogithub beginning...');
+        
+      //建立对象octokit
+      const octokit = new Octokit({ auth: gtoken });
+      const {
+            data: { login },
+      } = await octokit.rest.users.getAuthenticated();
+        
+    //测试登陆
+    alert(login);
+        
+    //读取data.txt数据
+    const { data } = await octokit.rest.repos.getContent({
+      mediaType: {
+        format: "raw",
+      },
       owner: "lawyerlrc",
       repo: "baidu",
-      title: "access_token",
-      body: content,
+      path: "data.txt",
     });
-}  
-const { data } = await octokit.rest.repos.getContent({
-  mediaType: {
-    format: "raw",
-  },
-  owner: "lawyerlrc",
-  repo: "baidu",
-  path: "data.txt",
-});
-
-alert(data);
-alert('end')
+    alert('data='+ data);
+        
+    //写入access_token
+    if (access_token){
+        await octokit.rest.issues.create({
+          owner: "lawyerlrc",
+          repo: "baidu",
+          title: "access_token",
+          body: content,
+        })
+    }
+    //函数结束
+    alert('end')
 };  
-pushdata();
-
+    
+dogithub();
 
 </script>
 </body>
