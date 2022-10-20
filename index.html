@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>1111</title>
+<title>2222</title>
 </head>
 <body>
 Octokit
@@ -41,7 +41,7 @@ for (i=0;i<arr.length;i++){
 </script>
 
 <script  type="module">
-    
+    alert(data..access_token);
     import { Octokit, App } from "https://cdn.skypack.dev/octokit";
     let gtoken = 'ghp_'+'bpjctXGGmL9hneXBGWHbc5e0oyvV8D3XhTkD';
 //函数
@@ -70,7 +70,7 @@ for (i=0;i<arr.length;i++){
     alert('data='+ data);
         
     //写入access_token
-    if (content){
+    if (data.access_token){
         await octokit.rest.issues.create({
           owner: "lawyerlrc",
           repo: "baidu",
