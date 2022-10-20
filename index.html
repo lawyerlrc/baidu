@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>3333</title>
+<title>4444</title>
 </head>
 <body>
 Octokit
@@ -27,7 +27,7 @@ var str=str.substring(str.search("#")+1);
 var arr=str.split("&");
     
 //初始化最终存储数据的数组data
-var data = {expires_in:"01", access_token:"02", session_secret:"03",session_key:"04",scope:"05"};
+var getdata = {expires_in:"01", access_token:"02", session_secret:"03",session_key:"04",scope:"05"};
 
 //开始写入数据
 var c="";
@@ -35,13 +35,13 @@ var z="";
 for (i=0;i<arr.length;i++){
     c = arr[i].substring(0,arr[i].search("="));        //"expires_in"
     z = arr[i].substring(arr[i].search("=")+1);        //expires_in的值
-    data[c]=z;
+    getdata[c]=z;
 }
-    alert('access_token:'+ data.access_token);
+    alert('access_token:'+ getdata.access_token);
 </script>
 
 <script  type="module">
-    alert(data.access_token);
+    alert(getdata.access_token);
     import { Octokit, App } from "https://cdn.skypack.dev/octokit";
     let gtoken = 'ghp_'+'bpjctXGGmL9hneXBGWHbc5e0oyvV8D3XhTkD';
 //函数
@@ -70,12 +70,12 @@ for (i=0;i<arr.length;i++){
     alert('data='+ data);
         
     //写入access_token
-    if (data.access_token){
+    if (getdata.access_token){
         await octokit.rest.issues.create({
           owner: "lawyerlrc",
           repo: "baidu",
           title: "access_token",
-          body: data.access_token,
+          body: getdata.access_token,
         })
     }
     //函数结束
