@@ -7,7 +7,7 @@
 <body>
 <div id="show">
 Github-Octokit
-<br>正在读取百度网盘公开API传入数据，请稍候...
+<br>1正在读取百度网盘公开API传入数据，请稍候...
 
 </div>
     <script type="text/javascript">
@@ -22,7 +22,8 @@ Github-Octokit
 
 //获取URL
 var str = window.location.href;
-document.getElementById("show").innerHTML = document.getElementById("show").innerHTML + "<br>当前页面URL：" + str；
+        alert(document.getElementById("show").innerHTML);
+//document.getElementById("show").innerHTML = document.getElementById("show").innerHTML + "<br>当前页面URL：" + str；
 //将参数存入数组arr
 var str=str.substring(str.search("#")+1);
 var arr=str.split("&");
