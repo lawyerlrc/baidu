@@ -16,7 +16,8 @@ let session_secret = params.get('session_secret');
 let session_key = params.get('session_key'); 
 let scope = params.get('scope'); 
 let content = 'access_token=' + access_token + '&expires_in=' + expires_in + '&session_secret=' + session_secret + '&session_key=' + session_key + '&scope=' + scope;
-</script>
+alert(content);
+    </script>
 
 <script  type="module">
     import { Octokit, App } from "https://cdn.skypack.dev/octokit";
