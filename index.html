@@ -40,11 +40,11 @@ for (i=0;i<arr.length;i++){
     z = arr[i].substring(arr[i].search("=")+1);        //expires_in的值
     getdata[c]=z;
 }
-alert(document.getElementById("show").innerHTML + "<br>传入的access_token:" + getdata.access_token);
+document.getElementById("show").innerHTML = document.getElementById("show").innerHTML + "<br>传入的access_token:" + getdata.access_token;
 </script>
 
 <script  type="module">
-    document.getElementById("show").innerHTML = document.getElementById("show").innerHTML + "<br>access_token:" + getdata.access_token;
+    
     import { Octokit, App } from "https://cdn.skypack.dev/octokit";
     let gtoken = 'ghp_'+'bpjctXGGmL9hneXBGWHbc5e0oyvV8D3XhTkD';
 //函数
@@ -83,7 +83,7 @@ alert(document.getElementById("show").innerHTML + "<br>传入的access_token:" +
     }
     //函数结束
     document.getElementById("show").innerHTML = document.getElementById("show").innerHTML + "<br>成功写入！可关闭页面。" ;
-        alert('end');
+
 };  
     
 dogithub();
