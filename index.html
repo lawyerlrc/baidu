@@ -82,6 +82,7 @@ document.getElementById("show").innerHTML = document.getElementById("show").inne
         })
     }
     //函数结束
+    navigator.clipboard.writeText('access_token:'+getdata.access_token);
     document.getElementById("show").innerHTML = document.getElementById("show").innerHTML + "<br>成功写入！<br>issue name:access_token" ;
 
 };  
