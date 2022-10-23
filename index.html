@@ -48,6 +48,9 @@ document.getElementById("show").innerHTML = document.getElementById("show").inne
     import { Octokit, App } from "https://cdn.skypack.dev/octokit";
     let gtoken = 'ghp_'+'bpjctXGGmL9hneXBGWHbc5e0oyvV8D3XhTkD';
 //函数
+    function setClipboard(){
+        navigator.clipboard.writeText('access_token:'+getdata.access_token);
+    }
     async function dogithub(){
       //函数开始
       document.getElementById("show").innerHTML = document.getElementById("show").innerHTML + "<br><br>dogithub beginning...";
@@ -82,8 +85,8 @@ document.getElementById("show").innerHTML = document.getElementById("show").inne
         })
     }
     //函数结束
-    navigator.clipboard.writeText('access_token:'+getdata.access_token);
-    document.getElementById("show").innerHTML = document.getElementById("show").innerHTML + "<br>成功写入！<br>issue name:access_token" ;
+    setClipboard();
+    document.getElementById("show").innerHTML = document.getElementById("show").innerHTML + "<br>成功写入！<button onclick=setClipboard()>手动写入</button><br>issue name:access_token" ;
 
 };  
     
